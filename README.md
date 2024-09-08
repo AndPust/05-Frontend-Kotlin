@@ -1,5 +1,5 @@
 # 05-Frontend-Kotlin
-A small backend application for an internet shop providin endpoints to the React application, made in Kotlin with Ktor
+A small backend application for an internet shop providing endpoints to the React application, made in Kotlin with Ktor
 
 To run this server run the gradle script in the `./kotlinBackend` directory:
 
