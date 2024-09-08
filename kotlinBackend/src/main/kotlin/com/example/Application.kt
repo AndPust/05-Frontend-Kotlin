@@ -29,7 +29,6 @@ fun main() {
         routing {
             get("/api"){
                 call.respondText(Json.encodeToString(itemList), ContentType.Text.Plain)
-                call.application.environment.log.info("AAAAAAA")
             }
             post("/api/cart"){
                 val post = call.receive<String>()
