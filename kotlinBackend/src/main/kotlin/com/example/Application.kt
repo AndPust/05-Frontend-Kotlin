@@ -29,6 +29,7 @@ fun main() {
         routing {
             get("/api"){
                 call.respondText(Json.encodeToString(itemList), ContentType.Text.Plain)
+                call.application.environment.log.info("AAAAAAA")
             }
             post("/api/cart"){
                 val post = call.receive<String>()
@@ -36,6 +37,7 @@ fun main() {
             }
             post("/api/payment"){
                 val post = call.receive<String>()
+                call.application.environment.log.info("Incoming payment request: $post")
                 call.respondText("Received $post from the payment request.", ContentType.Text.Plain)
             }
         }
